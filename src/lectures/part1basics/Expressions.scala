@@ -22,7 +22,20 @@ object Expressions extends App {
   println(aVariable)
 
   // Instructions versus expressions
+  // Instructions something that you tell the computer to do -- example change a varaible, print to the console, do this, do that , compute this etc. . .
+  //an expressions is something that has a value and/or type == will comput a value
 
+  // IF expression
+  val aCondition = true
+  //  val aConditionedValue = if(aCondition) 5 else 3 // IF EXPRESSION
+  val aConditionedValue = if(aCondition) {
+    5
+  } else{
+    3
+  }
+  println(aConditionedValue)
+  println(if(aCondition) 5 else 3)
+  println(1 + 3)
 
 
 }
