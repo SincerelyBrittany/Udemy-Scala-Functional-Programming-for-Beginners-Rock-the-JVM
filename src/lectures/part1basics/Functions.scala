@@ -24,6 +24,20 @@ object Functions extends App{
   //Use functional programming
 
 
+
+  def aFunctionWithSideEffects(aString: String): Unit = {
+    println(aString)
+  }
+
+  // we have nothing
+  // todo with computation - side effects - unit
+
+  def aBigFunction(n: Int): Int = {
+    def aSmallerFunction(a: Int, b: Int): Int = a + b
+    aSmallerFunction(n, n-1)
+  }
+
+
 // 1. A greeting function that takes in a name and an age
   // Greeting should say "hi, my name is $name and my age is $age
 
