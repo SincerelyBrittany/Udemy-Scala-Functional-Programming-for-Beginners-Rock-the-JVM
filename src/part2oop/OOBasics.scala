@@ -4,9 +4,11 @@ object OOBasics extends App{
 
 
   //instantiate a class by writing "new" Person
-  //on every new instantiate of person/ any class - the entire block is run. 
+  //on every new instantiate of person/ any class - the entire block is run.
   val person = new Person("John", 26)
   println(person)
+  person.greet("daniel")
+  person.greeting()
 
   //how do you access name and age?
   //dot notation will not work (person.age)
@@ -36,9 +38,17 @@ some writers say that you instantiate a class to create an object, a concrete in
  */
 
 //pass parameters into a class
-class Person(name: String, age: Int) // constructor - says that every single instance of person must be constructed by passing in a name and the age
+class Person(name: String, age: Int = 0) {// constructor - says that every single instance of person must be constructed by passing in a name and the age
+  def greet(name: String): Unit = println(s"${this.name} says: hello $name")
+  def greeting(): Unit = println(s"${this.name} says: hello $name")
 
+  //Overloading - methods with same name but different signatures = different number of parameters
+  def greet(): Unit = println("Hello world")
+
+}
 //in order to make class parameter *name and string into a class field you have to add the vowerl or var keyword
+
+
 
 
 class Car(val model: String, val year: Int, carType: String){
@@ -46,6 +56,11 @@ class Car(val model: String, val year: Int, carType: String){
   val x = 3; // this is a field
   println(1 + 3)
 
+  //multiple constructors - i wouuldnt work
+
+//  def this(model:String) = this(model, 1993, carType)
 }
+
+
 
 
