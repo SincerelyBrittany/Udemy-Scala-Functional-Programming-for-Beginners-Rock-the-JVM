@@ -4,7 +4,8 @@ object OOBasics extends App{
 
 
   //instantiate a class by writing "new" Person
-  val person = new Person
+  val person = new Person("John", 26)
+  println(person)
 
 }
 
@@ -23,4 +24,7 @@ object within a class, giving it a name, and locating it in some physical place.
 some writers say that you instantiate a class to create an object, a concrete instance of the class.
  */
 
-class Person
+//pass parameters into a class
+class Person(name: String, age: Int) // constructor - says that every single instance of person must be constructed by passing in a name and the age
+
+
